@@ -34,7 +34,6 @@ export default class Express {
 		this.setupThirdParties();
 		this.setupSession();
 		this.setupSecurity();
-		this.setupReactRouterMiddleware();
 	}
 
 	setupHandlebars() {
@@ -66,9 +65,5 @@ export default class Express {
 		app.use(passport.initialize());
 		app.use(passport.session());
 		app.set("tokenSecret", "teste");
-	}
-
-	setupReactRouterMiddleware() {
-		// reactRouterMiddleware(app, reactRoutes);
 	}
 }

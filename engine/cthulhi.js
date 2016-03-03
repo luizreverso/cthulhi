@@ -50,7 +50,6 @@ export default class Cthulhi {
 	configMongo(config) {
 		const mongo = new MongoController();
 		mongo.connectMongo(config);
-		// mongo.createSchemas(config.models);
 	}
 
 	startServer() {

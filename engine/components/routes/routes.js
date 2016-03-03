@@ -49,28 +49,9 @@ export default class Routes {
 			let raw = this.unparsedRoutes[key];
 			router = this.createRoute(key, raw);
 			parentRouter.use(parentPath, router);
-
-			// this.parentRouter.use()
-			// expressApp.setRoutes(raw.path, router);
-			// expressApp.setRoutes("", router);
 		}
 		return router;
 	}
-
-	// createRoutes() {
-	// 	let router;
-	// 	for (let key in this.unparsedRoutes) {
-	// 		router = express.Router();
-	// 		let rawRoute = this.unparsedRoutes[key];
-
-	// 		console.log(key);
-	// 		let route = new Route(key, rawRoute, router);
-	// 		router = route.configExpressRoute();
-	// 		expressApp.setRoutes("", router);
-	// 	}
-	// 	return router;
-	// }
-
 	setParentRouter(router) {
 		this.parentRouter = router;
 	}
